@@ -3,3 +3,12 @@
 <h2>What do you feel like tonight?</h2>
 <input type='string' placeholder='eg. Thai, Italian, Burger'/>
 <input type='submit' value='Search' class='search-btn' />
+
+<div class='restaurants'>
+  <h2><%= 'Restaurants:' if @restaurants.any? %></h2>
+    <ul>
+      <% @restaurants.each do |restaurant| %>
+        <%= link_to restaurant.name, restaurant %>
+      <% end %>
+    </ul>
+</div>

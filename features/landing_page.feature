@@ -7,6 +7,9 @@ Feature: Landing Page
     Given the following restaurants exists
       | name            | description                                      |
       | ThaiTanic       | Thailands finest food, watch out for the iceburg |
+      | Fu King Chinese | Best chinese food in town                        |
+
+
     And I visit the landing page
 
   Scenario: Visitor visits landing page
