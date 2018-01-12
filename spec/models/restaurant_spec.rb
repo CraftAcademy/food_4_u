@@ -13,7 +13,7 @@ RSpec.describe Restaurant, type: :model do
   end
 
   describe FactoryBot do
-    it 'should create a fake restaurant instance' do
+    it 'should be valid' do
       expect(FactoryBot.create(:restaurant)).to be_valid
     end
   end
