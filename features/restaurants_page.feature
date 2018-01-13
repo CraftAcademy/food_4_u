@@ -10,8 +10,10 @@ Feature: Visitor can view restaurant page
     | Fu King Chinese | Best chinese food in town                        |
 
   Scenario: Visitor visits the restaurant page
-    Given I visit the "ThaiTanic" page
-    Then I should see "ThaiTanic"
+    Given I visit the landing page
+    When I click "ThaiTanic"
+    Then I should be redirected to the "ThaiTanic" page
+    And I should see "ThaiTanic"
     And I should see "Thailands finest food, watch out for the iceberg"
     And I should see "Menu 1"
     And I should see "Menu 2"
