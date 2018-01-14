@@ -6,9 +6,9 @@
 
 <div class='restaurants'>
   <h2><%= 'Restaurants:' if @restaurants.any? %></h2>
-    <ul>
-      <% @restaurants.each do |restaurant| %>
-        <%= link_to restaurant.name, restaurant %>
-      <% end %>
-    </ul>
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <%= link_to restaurant.name, restaurant %>
+    <% end %>
+  </ul>
 </div>
