@@ -1,4 +1,4 @@
-Feature: Visitor can view restaurant page
+Feature: Visitor can view details about a specific restaurant
   As a visitor
   In order to see the info about a specific restaurant
   I would like to be able to see the restaurant name and description
@@ -9,7 +9,7 @@ Feature: Visitor can view restaurant page
     | ThaiTanic       | Thailands finest food, watch out for the iceberg |
     | Fu King Chinese | Best chinese food in town                        |
 
-  Scenario: Visitor visits the restaurant page
+  Scenario: Visitor visits a specific restaurant page
     Given I visit the landing page
     When I click "ThaiTanic"
     Then I should be redirected to the "ThaiTanic" page
