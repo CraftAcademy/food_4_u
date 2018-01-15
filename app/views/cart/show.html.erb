@@ -1,3 +1,26 @@
+<div class="container">
+  <h1>Ordered Items</h1>
+  <table class="table">
+    <thead class="thead-light">
+    <tr>
+      <th>Selected Dishes</th>
+      <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td scope="row">Pah Thai:</td>
+      <td>60kr</td>
+    </tr>
+    <tr>
+      <td scope="row">Fried rice:</td>
+      <td>70kr</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
 <%= form_tag cart_path do %>
 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="<%=ENV['PUBLISHABLE_KEY'] %>"
