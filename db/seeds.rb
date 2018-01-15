@@ -11,3 +11,9 @@ Restaurant.all.each do |restaurant|
     puts "Create menu with name: #{c.name}"
   end
 end
+
+seed_file = Rails.root.join('db', 'seeds', 'order.yml')
+config = YAML::load_file(seed_file)
+Cart.create!(config) do |c|
+  puts "Create order with name: #{c.name}"
+end
