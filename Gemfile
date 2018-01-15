@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'jquery-rails'
 gem 'rails', '~> 5.1.4'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
@@ -13,6 +14,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'stripe'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -24,9 +26,14 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'coveralls', require: false
   gem 'launchy'
+  gem 'dotenv-rails'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
+  gem 'stripe-ruby-mock', '~> 2.5', require: 'stripe_mock'
 end
 
 group :development do
+  gem 'guard-livereload', '~> 2.5', require: false
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
