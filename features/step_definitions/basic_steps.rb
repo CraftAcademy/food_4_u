@@ -25,6 +25,7 @@ end
 def page_path_from(page_name)
   case page_name.downcase
     when 'thaitanic' then restaurant_path(Restaurant.find_by(name: page_name))
+    when 'cart' then cart_path()  
   end
 end
 
