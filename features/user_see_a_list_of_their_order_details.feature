@@ -25,6 +25,7 @@ Feature: User adds products to an order
     Given I visit the "ThaiTanic" page
     And I click on "Add to Order" for "Margherita"
     Then I should see "Margherita has been added to your order"
+    And I should be on the restaurant "ThaiTanic" page
     And An order should have been created in the database
     And "Margherita" should be an order item
 
