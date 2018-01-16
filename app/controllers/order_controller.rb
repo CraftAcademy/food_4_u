@@ -1,4 +1,4 @@
-class CartController < ApplicationController
+class OrderController < ApplicationController
   before_action :check_env
   def show
   end
@@ -19,7 +19,7 @@ class CartController < ApplicationController
 
     if charge.paid?
       message = 'Your transaction was successful!'
-      redirect_to cart_path, notice: message
+      redirect_to order_path, notice: message
     end
   end
 
