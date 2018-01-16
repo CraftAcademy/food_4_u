@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20180115194802) do
   enable_extension "plpgsql"
 
   create_table "carts", force: :cascade do |t|
-    t.string "order"
+    t.string "dish"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "price"

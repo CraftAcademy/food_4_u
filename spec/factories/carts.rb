@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :cart do
-    order "OrderItems"
+    dish "OrderItems"
     price 5.75
   end
 end

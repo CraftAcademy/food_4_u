@@ -15,5 +15,5 @@ end
 seed_file = Rails.root.join('db', 'seeds', 'order.yml')
 config = YAML::load_file(seed_file)
 Cart.create!(config) do |c|
-  puts "Create order with name: #{c.name}"
+  puts "Create order with dish: #{c.dish}"
 end

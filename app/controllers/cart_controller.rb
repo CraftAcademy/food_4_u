@@ -1,6 +1,7 @@
 class CartController < ApplicationController
   before_action :check_env
   def show
+    @order = 60 + 70
   end
 
   def create
