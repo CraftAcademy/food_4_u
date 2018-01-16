@@ -17,7 +17,16 @@ end
 
 And(/^"([^"]*)" should be an order item$/) do |product_name|
   #product = Product.find_by(name: product_name)
+  @order = @order || Order.last
   items_collection = @order.order_items.map{ |product| product.item.name }
   #item = @order.order_items.first.item
   expect(items_collection).to include product_name
+end
+
+And(/^"([^"]*)" is already in my order$/) do |product_name|
+  steps %Q{
+   And I click on "Add to Order" for "#{product_name}"
+   Then I should see "Margherita has been added to your order"
+   And I should be on the restaurant "ThaiTanic" page
+        }
 end
