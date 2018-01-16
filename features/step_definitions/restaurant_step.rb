@@ -16,3 +16,10 @@ Given("the following menus exist for {string}") do |restaurant, table|
     FactoryBot.create(:menu, hash)
   end
 end
+
+
+Given(/^the following fake products exists:$/) do |table|
+  table.hashes.each do |hash|
+
+  end
+end

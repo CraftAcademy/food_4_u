@@ -3,6 +3,12 @@ Feature: A visitor sees a list of the dishes ordered and the total price
   In order to see what I ordered and the total price
   I would like to be able to see a list of all the ordered dishes and total price on the cart page
 
+  Background:
+    Given the following fake products exists:
+    |name | price |
+    |Pizza| 25    |
+    |Kebab| 40    |
+
   Scenario: Visitor can access cart page to see a list of the ordered dishes and total price
     Given I visit the landing page
     And I click on "Cart" link
