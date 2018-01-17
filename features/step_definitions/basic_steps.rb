@@ -31,8 +31,8 @@ end
 Then("I should be on the {string} page") do |page|
   sleep(5)
   case page
-    when 'cart'
-      expect(current_path).to eq cart_path
+    when 'charge'
+      expect(current_path).to eq charge_path
   end
 end
 
