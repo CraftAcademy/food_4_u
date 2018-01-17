@@ -1,5 +1,5 @@
 Given("I visit the cart page") do
-  visit order_path
+  visit charges_path
 end
 
 When("I click {string} button") do |element|

@@ -1,4 +1,4 @@
-class OrderController < ApplicationController
+class ChargesController < ApplicationController
   before_action :check_env
   def show
   end
@@ -19,7 +19,7 @@ class OrderController < ApplicationController
 
     if charge.paid?
       message = 'Your transaction was successful!'
-      redirect_to order_path, notice: message
+      redirect_to charges_path, notice: message
     end
   end
 
