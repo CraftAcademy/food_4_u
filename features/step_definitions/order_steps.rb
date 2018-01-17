@@ -16,10 +16,8 @@ And(/^An order should have been created in the database$/) do
 end
 
 And(/^"([^"]*)" should be an order item$/) do |product_name|
-  #product = Product.find_by(name: product_name)
   @order = @order || Order.last
   items_collection = @order.order_items.map{ |product| product.item.name }
-  #item = @order.order_items.first.item
   expect(items_collection).to include product_name
 end
 
