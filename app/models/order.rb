@@ -1,4 +1,7 @@
 class Order < ApplicationRecord
-  validates :dish, presence: true
-  validates :price, presence: true
+  acts_as_shopping_cart_using :order_item
+
+  def order_items
+    shopping_cart_items
+  end
 end
