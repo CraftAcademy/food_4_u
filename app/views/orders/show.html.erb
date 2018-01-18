@@ -1,6 +1,9 @@
-<h2>Ordered Items</h2>
+<h3>Ordered Items</h3>
 <ul>
-  <% @order.order_items.each do |item| %>
-  <li><%="#{item.item.name}: #{item.item.price.to_i} kr"%></li>
+  <% @order.order_items.each do |product| %>
+  <li><%="#{product.item.name}: #{product.item.price} kr"%></li>
   <% end %>
 </ul>
+<p>Subtotal: <%= @order.subtotal %> kr</p>
+<p>Delivery fee: <%= @order.shipping_cost %> kr</p>
+<p>Total: <%= @order.total %> kr</p>
