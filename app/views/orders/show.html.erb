@@ -4,6 +4,7 @@
     <thead class="thead-light">
     <tr>
       <th>Selected Dishes</th>
+      <th>Quantity</th>
       <th>Price</th>
     </tr>
     </thead>
@@ -11,6 +12,7 @@
     <% @order.order_items.each do |product| %>
     <tr>
       <td scope="row"><%="#{product.item.name}: "%></td>
+      <td><%=product.quantity%></td>
       <td><%=" #{product.item.price} kr"%></td>
     </tr>
     <% end %>
