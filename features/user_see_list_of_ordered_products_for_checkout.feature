@@ -26,7 +26,7 @@ Feature: Visitor can go to the order page to see a list of ordered products and 
     And I click on "Add to Order" for "Margherita"
     And I click on "Add to Order" for "Hawaii"
     And I click on "Checkout" link
-    Then I should be redirected to the "Order" page
+    Then I should be redirected to the "Checkout" page
     And I should see "Ordered Items"
     And I should see "Margherita: 15.0 kr"
     And I should see "Hawaii: 14.0 kr"

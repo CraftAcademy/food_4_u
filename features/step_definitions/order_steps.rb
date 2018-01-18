@@ -28,12 +28,3 @@ And(/^"([^"]*)" is already in my order$/) do |product_name|
    And I should be on the restaurant "ThaiTanic" page
         }
 end
-
-#Given("the products are added to an order") do
-  #order = Order.create
-  #@products = Product.all
-  #@products.each do |product|
-  #  order.add(product, product.price)
- # end
-  #session[:order_id] = order.id
-#end
