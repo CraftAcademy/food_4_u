@@ -1,5 +1,5 @@
 @javascript
-Feature: User can pay for order
+Feature: A User can pay for their order using stripe
   As a visitor
   In order to complete my purchase
   I need to fill in a stripe payment form
