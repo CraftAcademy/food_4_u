@@ -10,17 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180114154348) do
+ActiveRecord::Schema.define(version: 20180116192018) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "menus", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.bigint "restaurant_id"
     t.index ["restaurant_id"], name: "index_menus_on_restaurant_id"
+  end
+
+  create_table "order_items", force: :cascade do |t|
+    t.integer "owner_id"
+    t.string "owner_type"
+    t.integer "quantity"
+    t.integer "item_id"
+    t.string "item_type"
+    t.integer "price_cents", default: 0, null: false
+    t.string "price_currency", default: "USD", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product_categories", force: :cascade do |t|
+    t.string "name"
+    t.bigint "menu_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["menu_id"], name: "index_product_categories_on_menu_id"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.float "price"
+    t.bigint "product_category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_category_id"], name: "index_products_on_product_category_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
@@ -31,4 +61,6 @@ ActiveRecord::Schema.define(version: 20180114154348) do
   end
 
   add_foreign_key "menus", "restaurants"
+  add_foreign_key "product_categories", "menus"
+  add_foreign_key "products", "product_categories"
 end
