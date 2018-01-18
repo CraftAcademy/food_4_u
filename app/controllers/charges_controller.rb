@@ -1,7 +1,5 @@
-class ChargeController < ApplicationController
+class ChargesController < ApplicationController
   before_action :check_env
-  def show
-  end
 
   def create
     @amount = 1000
@@ -19,7 +17,7 @@ class ChargeController < ApplicationController
 
     if charge.paid?
       message = 'Your transaction was successful!'
-      redirect_to charge_path, notice: message
+      redirect_to charges_path, notice: message
     end
   end
 
