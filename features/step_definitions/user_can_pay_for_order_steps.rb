@@ -1,4 +1,4 @@
-Given("I visit the cart page") do
+Given("I visit the checkout page") do
   visit charges_path
 end
 
