@@ -1,0 +1,6 @@
+<h2>Ordered Items</h2>
+<ul>
+  <% @order.order_items.each do |item| %>
+  <li><%="#{item.item.name}: #{item.item.price.to_i} kr"%></li>
+  <% end %>
+</ul>
