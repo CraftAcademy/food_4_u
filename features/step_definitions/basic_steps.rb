@@ -47,7 +47,7 @@ def page_path_from(page_name)
     when 'sign up' then
       new_user_registration_path
     when 'cart' then
-      charges_path()
+      charges_path
     when 'checkout' then
       order_path(Order.last)
   end
