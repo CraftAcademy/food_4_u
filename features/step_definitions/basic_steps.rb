@@ -31,16 +31,13 @@ def page_path_from(page_name)
     when 'thaitanic' then restaurant_path(Restaurant.find_by(name: page_name))
     when 'landing' then root_path
     when 'sign up' then new_user_registration_path
-    when 'checkout' then charges_path()
+    when 'checkout' then charges_path
   end
 end
 
-Then("I should be on the {string} page") do |page|
+Then("I should be on the {string} page") do |page_name|
   sleep(5)
-  case page
-    when 'checkout'
-      expect(current_path).to eq charges_path
-  end
+    expect(current_path).to eq page_path_from(page_name)
 end
 
 Then("I should not see {string}") do |content|
