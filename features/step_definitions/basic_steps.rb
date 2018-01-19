@@ -40,15 +40,17 @@ end
 
 def page_path_from(page_name)
   case page_name.downcase
-    when 'thaitanic' then
+    when 'thaitanic'
       restaurant_path(Restaurant.find_by(name: page_name))
-    when 'landing' then
+    when 'landing'
       root_path
-    when 'sign up' then
+    when 'sign up'
       new_user_registration_path
-    when 'cart' then
+    when 'cart'
       charges_path
-    when 'checkout' then
+    when 'checkout'
       order_path(Order.last)
+    else
+      root_path
   end
 end
