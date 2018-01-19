@@ -1,7 +1,7 @@
 Feature: Navbar
   As a user
   In order to navigate the site
-  I would like to see a navbar with a home button and a cart button displayed
+  I would like to see a navbar with a home button and a checkout button displayed
 
   Scenario: Display navbar and allow visitor to navigate back home
     Given I visit the landing page
