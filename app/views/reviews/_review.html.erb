@@ -1,9 +1,13 @@
-<div class='review'>
-  <% if review.id? %>
-    <span>By: <strong><%= review.user.email %></strong></span>
-    <span><%= time_ago_in_words(review.created_at) %> ago</span>
-  <% end %>
-  <p>
-    <%= review.body %>
-  </p>
-</div>
+<blockquote class="blockquote">
+  <div class='review'>
+    <p>
+      <%= review.body %>
+    </p>
+    <% if review.id? %>
+      <footer class="blockquote-footer">
+        <span>By: <strong><%= review.user.email %></strong></span>
+        <cite title="Source Title"><%= time_ago_in_words(review.created_at) %> ago</cite>
+      </footer>
+    <% end %>
+  </div>
+</blockquote>
