@@ -1,19 +1,27 @@
-<h1>Welcome to our site!</h1>
-
-<h2>What do you feel like tonight?</h2>
-
-<%= form_tag root_path, method: :get do %>
-  <%= text_field_tag :search, nil, placeholder: 'eg. Thai, American, Asian' %>
-  <%= submit_tag 'Search', class: 'search-btn' %>
-<% end %>
-
-<% if @results %>
-  <div class='restaurants'>
-    <h2><%= "Results for #{@assortment}" if @results.any? %></h2>
-      <ul>
-        <% @results.each do |restaurant| %>
-          <%= link_to restaurant.name, restaurant %>
-        <% end %>
-      </ul>
+<div class="container">
+  <div class="header">
+    <h1>Kitchen to Couch</h1>
+    <p>Where we delivery the food straight to your couch!</p>
   </div>
-<% end %>
+  <div class="question">
+    <h2>What do you feel like tonight?</h2>
+  </div>
+  <div class="search_form">
+    <%= form_tag root_path, method: :get do %>
+        <%= text_field_tag :search, nil, placeholder: 'eg. Thai, American, Asian' %>
+        <%= submit_tag 'Search', class: 'search-btn' %>
+    <% end %>
+  </div>
+  <div>
+    <% if @results %>
+        <div class='restaurants'>
+          <h2><%= "Results for #{@assortment}" if @results.any? %></h2>
+          <ul>
+            <% @results.each do |restaurant| %>
+                <%= link_to restaurant.name, restaurant %>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+  </div>
+</div>
