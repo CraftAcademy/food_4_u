@@ -17,6 +17,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'stripe'
 gem 'acts_as_shopping_cart'
+gem 'state_machine'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -32,6 +33,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'stripe-ruby-mock', '~> 2.5', require: 'stripe_mock'
+  gem 'state_machines-rspec'
 end
 
 group :development do
