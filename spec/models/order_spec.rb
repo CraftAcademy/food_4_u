@@ -10,7 +10,6 @@ RSpec.describe Order, type: :model do
 
   describe 'States' do
     it { is_expected.to have_states :pending, :rejected, :finalized }
-    it { is_expected.to reject_states :finalized, when: :rejected }
     it { is_expected.to reject_events :payment_cleared, when: :rejected }
     it { is_expected.to handle_events :payment_cleared, :payment_declined, when: :pending }
     it { is_expected.to transition_from :pending, to_state: :finalized, on_event: :payment_cleared}
