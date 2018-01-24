@@ -1,5 +1,5 @@
 class Restaurant < ApplicationRecord
-  VALID_ASSORTMENT = ['Thai', 'Italian', 'Mexican', 'Asian', 'American']
+  VALID_ASSORTMENT = ['Thai', 'Italian', 'Chinese', 'American']
   validates_inclusion_of :assortment, in: VALID_ASSORTMENT
   has_many :menus
   validates :name, :description, :street_address, :post_code, :city, presence: true

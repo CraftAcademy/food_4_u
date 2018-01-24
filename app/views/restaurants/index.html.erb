@@ -12,7 +12,7 @@
   var restaurants = <%= raw @restaurants.to_json %>
 </script>
     <%= form_tag root_path, method: :get do %>
-        <%= text_field_tag :search, nil, placeholder: 'eg. Thai, American, Asian' %>
+        <%= text_field_tag :search, nil, placeholder: 'eg. Thai, American, Italian, Chinese' %>
         <%= submit_tag 'Search', class: 'search-btn' %>
     <% end %>
   </div>
