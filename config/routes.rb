@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
   root controller: :restaurants, action: :index
   resources :restaurants, only: [:show, :index] do
@@ -9,6 +10,10 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v0 do
       resources :ping, only: [:index], constraints: { format: 'json' }
+    end
+
+    namespace :v1 do
+      resources :restaurants, only: [:index]
     end
   end
 end
