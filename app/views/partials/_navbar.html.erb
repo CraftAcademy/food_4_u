@@ -11,7 +11,7 @@
     <ul class="navbar-nav  pull-right">
       <li class="nav-item glyphicon">
         <% if session[:order_id] %>
-          <%= link_to " #{current_order.total} Checkout", order_path(session[:order_id]), class: 'glyphicon-shopping-cart', id: "order-icon" %>
+          <%= link_to " $#{current_order.total} Checkout", order_path(session[:order_id]), class: 'glyphicon-shopping-cart', id: "order-icon" %>
         <% end %>
       </li>
       <% if current_user %>
