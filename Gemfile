@@ -16,8 +16,12 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'stripe'
+gem 'geocoder'
 gem 'acts_as_shopping_cart'
 gem 'state_machine'
+gem 'rails-assets-gmaps', source: 'https://rails-assets.org'
+gem 'active_model_serializers', '~> 0.10.0'
+gem 'rack-cors', require: 'rack/cors'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -32,6 +36,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
+  gem 'webmock'
   gem 'stripe-ruby-mock', '~> 2.5', require: 'stripe_mock'
   gem 'state_machines-rspec'
 end

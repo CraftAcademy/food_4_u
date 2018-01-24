@@ -1,5 +1,10 @@
 class Order < ApplicationRecord
+  before_validation on: :create do |resource|
+    resource.send(:initialize_state_machines, dynamic: :force)
+  end
+
   acts_as_shopping_cart_using :order_item
+  validates :state, presence: true
 
   def order_items
     shopping_cart_items
