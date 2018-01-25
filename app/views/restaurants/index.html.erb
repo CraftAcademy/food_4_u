@@ -11,8 +11,8 @@
     <% end %>
   </div>
   <div>
-    <% if @results %>
-        <div class='restaurants'>
+    <div class='restaurants'>
+      <% if @results %>
           <h2><%= "Results for #{@assortment}" if @results.any? %></h2>
           <ul>
             <% @results.each do |restaurant| %>

@@ -4,13 +4,16 @@
   <% menu.product_categories.each do |category| %>
       <h4><%= category.name %></h4>
       <% category.products.each do |product| %>
-          <div id="product-<%= product.id %>" class='product-area'>
+          <div class='product-area' id="product-<%= product.id %>">
             <span><%= product.name %> Price: <%= product.price %></span>
+            <div class='order-btn'>
             <% if session[:order_id] %>
-                <%= button_to 'Add to Order', order_path(session[:order_id]), method: :put, params: {product: product}, class: 'order-btn' %>
+                <%= button_to 'Add to Order', order_path(session[:order_id]), method: :put, params: {product: product}, class: 'search-btn btn btn-outline' %>
             <% else %>
-                <%= button_to 'Add to Order', orders_path, params: {product: product}, class: 'order-btn' %>
+                <%= button_to 'Add to Order', orders_path, params: {product: product}, class: 'search-btn btn btn-outline' %>
+                <!-- <button class='search-btn btn btn-outline'>Order</button> -->
             <% end %>
+            </div>
             <br/>
           </div>
       <% end %>
