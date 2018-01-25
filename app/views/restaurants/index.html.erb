@@ -1,19 +1,13 @@
 <div class="container">
   <div class="header">
     <h1>Kitchen to Couch</h1>
-    <p>Where we deliver the food straight to your couch!</p>
-  </div>
-  <div class="question">
+    <h2>
     <h2>What do you feel like tonight?</h2>
   </div>
-  <div class="search_form">
-    <div id="map"></div>
-<script type="text/javascript">
-  var restaurants = <%= raw @restaurants.to_json %>
-</script>
+  <div class="search">
     <%= form_tag root_path, method: :get do %>
         <%= text_field_tag :search, nil, placeholder: 'eg. Thai, American, Italian, Chinese' %>
-        <%= submit_tag 'Search', class: 'search-btn' %>
+        <%= submit_tag 'Search', class: 'search-btn btn btn-outline-warning' %>
     <% end %>
   </div>
   <div>
@@ -28,5 +22,9 @@
         </div>
     <% end %>
   </div>
+  <div id="map"></div>
+  <script type="text/javascript">
+    var restaurants = <%= raw @restaurants.to_json %>
+  </script>
 </div>
 <script>initiateMap()</script>
