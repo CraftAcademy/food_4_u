@@ -11,7 +11,7 @@
   street_address: Hamngatan 1
   post_code: 11147
   city: Stockholm
-  assortment: Asian
+  assortment: Chinese
 
 - name: Pho King Good
   description: Because when you really like your food you have to say it with emphasis!
@@ -19,3 +19,10 @@
   post_code: 11221
   city: Stockholm
   assortment: American
+
+- name: Almore
+  description: Italian food, for real!
+  street_address: Kungsgatan 20
+  post_code: 11156
+  city: Stockholm
+  assortment: Italian

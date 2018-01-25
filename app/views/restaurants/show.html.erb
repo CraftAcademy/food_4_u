@@ -17,9 +17,12 @@
 <div id='reviews'>
   <%= render @restaurant.reviews %>
 </div>
-
+<p><strong>Write your review about the restaurant</strong></p>
 <%= form_for [@restaurant, @restaurant.reviews.new] do |f| %>
-  <%= f.label :body %>
-  <%= f.text_area :body %>
-  <%= f.submit "Add review" %>
+  <div class='form-group'>
+    <%= f.text_area :body, class: 'form_control', placeholder: 'Review' %>
+  </div>
+  <div class='form-group'>
+    <%= f.submit "Add review", class: 'btn btn-info' %>
+  </div>
 <% end %>
