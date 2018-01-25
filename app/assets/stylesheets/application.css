@@ -21,16 +21,22 @@
 }
 
 .navbar {
-
+  background-color: rgb(17, 126, 221);
 }
 
-.nav-item:hover {
-  color: red;
+.glyphicon {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1.5px;
+  display: inline;
+  padding: 5px;
+  color: #fff;
+  margin: 0 10px;
 }
 
-#order-icon {
-  right: 0;
-  width: 5%;
+.glyphicon:hover {
+  border-top: 4px solid rgb(245, 170, 95);
+  text-decoration: none;
+  color: rgb(245, 170, 95);
 }
 
 #footer {
