@@ -13,7 +13,7 @@
   <div>
     <div class='restaurants'>
       <% if @results %>
-          <h2><%= "Results for #{@assortment}" if @results.any? %></h2>
+          <h2><%= "Results for #{@assortment}" %></h2>
           <ul>
             <% @results.each do |restaurant| %>
                 <%= link_to restaurant.name, restaurant %>
