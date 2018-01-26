@@ -1,30 +1,34 @@
 <div class="container">
-  <div class="header">
-    <h1>Kitchen to Couch</h1>
-    <h2>
-    <h2>What do you feel like tonight?</h2>
-  </div>
-  <div class="search">
-    <%= form_tag root_path, method: :get do %>
+  <div id="landing-page">
+    <div class="header">
+      <h1>Kitchen to Couch</h1>
+      <h2>
+        <h2>What do you feel like tonight?</h2>
+    </div>
+    <div class="search">
+      <%= form_tag root_path, method: :get do %>
         <%= text_field_tag :search, nil, placeholder: 'eg. Thai, American, Italian', class: 'form-control' %>
         <%= submit_tag 'Search', class: 'search-btn btn btn-outline-warning' %>
-    <% end %>
-  </div>
-  <div>
-    <div class='restaurants'>
-      <% if @results %>
+      <% end %>
+    </div>
+    <div>
+      <div class='restaurants'>
+        <% if @results %>
           <h2><%= "Results for #{@assortment}" %></h2>
           <ul>
             <% @results.each do |restaurant| %>
-                <%= link_to restaurant.name, restaurant %>
+              <%= link_to restaurant.name, restaurant %>
             <% end %>
           </ul>
+          </div>
+        <% end %>
         </div>
-    <% end %>
   </div>
   <div id="map"></div>
-  <script type="text/javascript">
-    var restaurants = <%= raw @restaurants.to_json %>
-  </script>
 </div>
+<script type="text/javascript">
+    var restaurants =
+    <%= raw @restaurants.to_json %>
+</script>
+
 <script>initiateMap()</script>

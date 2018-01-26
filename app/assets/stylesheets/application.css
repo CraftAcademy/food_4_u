@@ -12,6 +12,12 @@ html {
     text-align: left;
 }
 
+#landing-page {
+    background: url('kitchen.jpg');
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
 body {
     text-align: center;
     position: relative;
@@ -25,7 +31,8 @@ body {
 }
 
 .navbar {
-    background-color: rgb(17, 126, 221);
+    background-color: black;
+    margin-bottom: 5px;
 }
 
 .glyphicon {
