@@ -12,12 +12,6 @@ html {
     text-align: left;
 }
 
-#landing-page {
-    background: url('kitchen.jpg');
-    background-size: cover;
-    margin-bottom: 20px;
-}
-
 body {
     text-align: center;
     position: relative;
