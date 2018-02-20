@@ -1,24 +1,55 @@
-# README
+## Kitchen To Couch
+Craft Academy OCT 2017 Cohort Slowfood Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### About
+This is an application for ordering food online from multiple restaurants.  
 
-Things you may want to cover:
+Rails v.5.1  
 
-* Ruby version
+Visit a demo here: https://kitchen-to-couch.herokuapp.com/
 
-* System dependencies
+### Install
+Run `bundle install` to install all gems  
+Run `rails db:create db:migrate` to create the database and run all migrations  
 
-* Configuration
+### Tests
+We have used rspec for testing the database models and cucumber for feature tests.  
+To run all tests, run `rails ci:tests`  
 
-* Database creation
+### Technologies
+**Gmaps** for implementing google maps with restaurants  
+**Stripe** for payment  
+**Devise** for authentication  
 
-* Database initialization
+### Gems
+devise  
+jquery-rails  
+rails  
+geocoder  
+stripe  
+acts_as_shopping_cart  
+rails-assets-gmaps  
+active_model_serializers  
+rack-cors  
+dotenv-railv  
 
-* How to run the test suite
+#### For testing
+pry-byebug  
+shoulda-matchers  
+factory_bot_rails  
+launchy  
+database_cleaner  
+rspec-rails  
+cucumber-rails  
+webmock  
+stripe-ruby-mock  
+selenium-webdriver  
+chromedriver-helper  
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Contributors
+https://github.com/aljoh  
+https://github.com/scottyyyb  
+https://github.com/sophiesjoberg  
+https://github.com/NegativeKarma  
+https://github.com/zuzanna81  
+https://github.com/marizaswart
