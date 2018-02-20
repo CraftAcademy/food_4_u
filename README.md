@@ -4,6 +4,10 @@ Craft Academy OCT 2017 Cohort Slowfood Project
 ### About
 This is an application for ordering food online from multiple restaurants.  
 
+Rails v.5.1  
+
+Visit a demo here: https://kitchen-to-couch.herokuapp.com/
+
 ### Install
 Run `bundle install` to install all gems  
 Run `rails db:create db:migrate` to create the database and run all migrations  
