@@ -23,7 +23,7 @@ Feature: Restaurant page reviews
 
   Scenario: User adds review [Happy Path]
     And I visit the "ThaiTanic" page
-    When I fill in "Body" with "Great food, but I did not see Leo!"
+    When I fill in "Review" with "Great food, but I did not see Leo!"
     And I click "Add review"
     Then I should see "Review has been successfully added."
     And I should see "Great food, but I did not see Leo!"
@@ -31,7 +31,7 @@ Feature: Restaurant page reviews
   Scenario: User adds review when logged out [Sad Path]
     And I log out
     And I visit the "ThaiTanic" page
-    When I fill in "Body" with "Great food, but I did not see Leo!"
+    When I fill in "Review" with "Great food, but I did not see Leo!"
     And I click "Add review"
     Then I should be redirected to the "Login" page
     And I should see "You need to sign in or sign up before continuing."

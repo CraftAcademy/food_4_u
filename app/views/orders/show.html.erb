@@ -1,5 +1,6 @@
-<div class="container">
-  <h1>Ordered Items</h1>
+<!-- <div class="container"> -->
+<h1>Ordered Items</h1>
+<div class="order-table">
   <table class="table">
     <thead class="thead-light">
     <tr>
@@ -10,11 +11,11 @@
     </thead>
     <tbody>
     <% @order.order_items.each do |product| %>
-    <tr>
-      <td scope="row"><%="#{product.item.name}: "%></td>
-      <td><%=product.quantity%></td>
-      <td><%=" #{product.item.price} kr"%></td>
-    </tr>
+      <tr>
+        <td scope="row"><%= "#{product.item.name}: " %></td>
+        <td><%= product.quantity %></td>
+        <td><%= " #{product.item.price} kr" %></td>
+      </tr>
     <% end %>
     <tr>
       <td scope="row">Subtotal:</td>
@@ -34,11 +35,12 @@
     </tbody>
   </table>
 </div>
+<!-- </div> -->
 
 <%= form_tag charges_path do %>
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="<%= ENV['PUBLISHABLE_KEY'] %>"
-    data-description="Payment for order"
-    data-amount="<%= @order.total * 100 %>"
-    data-locale="auto"></script>
+          data-key="<%= ENV['PUBLISHABLE_KEY'] %>"
+          data-description="Payment for order"
+          data-amount="<%= @order.total * 100 %>"
+          data-locale="auto"></script>
 <% end %>

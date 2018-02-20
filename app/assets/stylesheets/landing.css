@@ -1,3 +1,7 @@
+.search {
+  margin: 35px 0;
+}
+
 .search h1 {
   margin: 60px 0;
   font-size: 52px;
@@ -8,8 +12,9 @@
 
 .search-btn {
   border: 2px solid rgb(245, 170, 95);
+  color: rgb(245, 170, 95);
   letter-spacing: 1px;
-  font-size: 18px;
+  font-size: 16px;
   margin-left: 10px;
   margin-bottom: 3px;
 }
@@ -23,24 +28,20 @@
 
 .form-control {
   width: 20%;
-  padding: 20px 0;
+  padding: 18px 0;
   display: inline;
   padding-left: 10px;
   min-width: 175px;
   max-width: 200px;
+  font-size: 14px;
 }
 
-.card-footer {
-  margin-top: 100px;
+.form-control::placeholder {
+  font-size: 12px;
 }
 
-
-.glyphicon {
-  color: black;
-}
-
-.pull-right {
-  float: right !important;
+.restaurants {
+  height: 125px;
 }
 
 .restaurants h2 {
